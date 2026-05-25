@@ -5,8 +5,11 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import classification_report, confusion_matrix
 import seaborn as sns
 
+# Substitua pelo modelo correto
+NOME_MODELO = 'modelo_baseline.keras'
+
 # 1. Carregar o modelo treinado
-model = load_model('modelo_treinado.keras')  # Substitua pelo caminho correto
+model = load_model(NOME_MODELO)
 
 # 2. Carregar os dados de teste
 (_, _), (test_images, test_labels) = cifar10.load_data()
@@ -46,6 +49,7 @@ def plot_image_and_prediction(index):
     plt.imshow(test_images[index])
     plt.title(f"Verdade: {test_labels[index][0]}, Predição: {predicted_classes[index]}")
     plt.axis('off')
+    plt.savefig('matriz_confusao.png', dpi=150, bbox_inches='tight')
     plt.show()
 
 # Mostrar 5 exemplos aleatórios
