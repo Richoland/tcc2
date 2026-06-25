@@ -1,0 +1,15 @@
+{
+  "cenario": "cifar10_brightness",
+  "dataset": "cifar10",
+  "tecnicas": [
+    "brightness"
+  ],
+  "epochs": 25,
+  "batch_size": 64,
+  "concatenar": true,
+  "tamanho_treino": 100000,
+  "accuracy": 0.8148,
+  "f1_macro": 0.8130705603409302,
+  "f1_weighted": 0.8130705603409301,
+  "test_loss": 0.6305016279220581
+}

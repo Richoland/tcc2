@@ -1,0 +1,15 @@
+{
+  "cenario": "cifar10_flip",
+  "dataset": "cifar10",
+  "tecnicas": [
+    "flip"
+  ],
+  "epochs": 25,
+  "batch_size": 64,
+  "concatenar": true,
+  "tamanho_treino": 100000,
+  "accuracy": 0.8274,
+  "f1_macro": 0.8252484765554486,
+  "f1_weighted": 0.8252484765554488,
+  "test_loss": 0.5513190031051636
+}

@@ -1,0 +1,15 @@
+{
+  "cenario": "fashion_flip",
+  "dataset": "fashion_mnist",
+  "tecnicas": [
+    "flip"
+  ],
+  "epochs": 25,
+  "batch_size": 64,
+  "concatenar": true,
+  "tamanho_treino": 120000,
+  "accuracy": 0.91,
+  "f1_macro": 0.9103651625952498,
+  "f1_weighted": 0.9103651625952498,
+  "test_loss": 0.2649628221988678
+}

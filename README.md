@@ -1,59 +1,39 @@
-# TCC2 — Aumento de Dados com Albumentations para Classificação de Imagens
+# Framework para Avaliação Sistemática de Técnicas de Aumento de Dados em Imagens
 
-Trabalho de Conclusão de Curso que investiga o impacto de técnicas de data augmentation na performance de uma Rede Neural Convolucional (CNN) treinada no dataset CIFAR-10.
+Trabalho de Conclusão de Curso II — Bacharelado em Ciência da Computação, IFSul Campus Passo Fundo, 2026.
 
-## Sobre o Projeto
+**Autor:** Ricardo Ilan Dall'Agnol
+**Orientador:** Prof. Dr. João Mário Lopes Brezolin
 
-O projeto implementa um pipeline de aumento de dados utilizando a biblioteca Albumentations e avalia como diferentes transformações afetam a acurácia de um modelo CNN construído com TensorFlow/Keras.
+## Descrição
 
-### Estrutura
+Framework modular para avaliação sistemática e controlada de técnicas de aumento de dados em problemas de classificação de imagens. A ferramenta executa experimentos comparativos mantendo constantes a arquitetura da rede, os hiperparâmetros de treinamento e o conjunto de dados, variando apenas a configuração de aumento, o que permite isolar o efeito de cada técnica avaliada.
 
-- `augmentation_pipeline.py` — Define o pipeline de transformações de aumento de dados com Albumentations.
-- Treinamento e avaliação do modelo CNN com arquitetura Sequential (Conv2D, MaxPooling, BatchNormalization, Dropout).
-- Visualização dos resultados com Matplotlib.
+## Arquitetura
 
-## Tecnologias
+A biblioteca está organizada em cinco módulos:
 
-- Python 3.12
-- TensorFlow / Keras
-- Albumentations
-- OpenCV
-- Matplotlib
-- NumPy
+- framework/dataset_loader.py - carrega CIFAR-10 ou Fashion-MNIST e fornece os metadados do dataset
+- framework/augmentation.py - constrói o pipeline de aumento a partir da lista de técnicas (Albumentations)
+- framework/model.py - constrói a CNN adaptada ao formato do dataset
+- framework/trainer.py - executa um cenário (treina, avalia, salva artefatos)
+- run_experiment.py - orquestrador: define a lista de cenários e consolida os resultados
 
-## Como Executar
+## Como executar
 
-1. Clone o repositório:
+Criar ambiente virtual com Python 3.12, instalar dependências e rodar:
 
-```bash
-git clone https://github.com/Richoland/tcc2.git
-cd tcc2
-```
+    python3.12 -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
+    python run_experiment.py
 
-2. Crie e ative um ambiente virtual:
+Os resultados são gerados em results/: tabela consolidada (comparativo.csv, comparativo.md), métricas por cenário (*_metrics.json), relatórios de classificação (*_classification.txt), históricos de treino (*_history.csv) e matrizes de confusão (*_confusion_matrix.png). Os modelos treinados (*.keras) também são salvos localmente, mas não são versionados.
 
-```bash
-python -m venv venv
+## Cenários executados no TCC
 
-# Windows
-.\venv\Scripts\Activate
+12 cenários (2 datasets x 6 configurações): baseline sem aumento, quatro técnicas isoladas (rotação, espelhamento horizontal, brilho/contraste e desfoque gaussiano) e a combinação das quatro. Aplicados a CIFAR-10 e Fashion-MNIST.
 
-# Linux/Mac
-source venv/bin/activate
-```
+## Licença
 
-3. Instale as dependências:
-
-```bash
-pip install -r requirements.txt
-```
-
-4. Execute o projeto:
-
-```bash
-python main.py
-```
-
-## Dataset
-
-O projeto utiliza o [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html), carregado diretamente via `tensorflow.keras.datasets`. O dataset contém 60.000 imagens 32x32 em 10 classes.
+MIT (ver arquivo LICENSE).

@@ -1,0 +1,16 @@
+              precision    recall  f1-score   support
+
+       Avião       0.85      0.83      0.84      1000
+   Automóvel       0.94      0.88      0.91      1000
+     Pássaro       0.84      0.71      0.77      1000
+        Gato       0.75      0.61      0.67      1000
+       Veado       0.83      0.82      0.82      1000
+    Cachorro       0.75      0.77      0.76      1000
+        Sapo       0.89      0.88      0.89      1000
+      Cavalo       0.84      0.89      0.86      1000
+       Navio       0.84      0.92      0.88      1000
+    Caminhão       0.77      0.95      0.85      1000
+
+    accuracy                           0.83     10000
+   macro avg       0.83      0.83      0.83     10000
+weighted avg       0.83      0.83      0.83     10000

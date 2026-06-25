@@ -1,0 +1,15 @@
+{
+  "cenario": "fashion_brightness",
+  "dataset": "fashion_mnist",
+  "tecnicas": [
+    "brightness"
+  ],
+  "epochs": 25,
+  "batch_size": 64,
+  "concatenar": true,
+  "tamanho_treino": 120000,
+  "accuracy": 0.9003,
+  "f1_macro": 0.9017132806336559,
+  "f1_weighted": 0.9017132806336556,
+  "test_loss": 0.3217070698738098
+}

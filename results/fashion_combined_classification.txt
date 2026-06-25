@@ -1,0 +1,16 @@
+              precision    recall  f1-score   support
+
+    Camiseta       0.90      0.77      0.83      1000
+       Calça       0.99      0.98      0.98      1000
+     Pulôver       0.90      0.81      0.85      1000
+     Vestido       0.90      0.91      0.90      1000
+      Casaco       0.86      0.81      0.83      1000
+    Sandália       0.99      0.97      0.98      1000
+      Camisa       0.63      0.82      0.72      1000
+       Tênis       0.92      0.98      0.95      1000
+       Bolsa       0.97      0.97      0.97      1000
+        Bota       0.99      0.94      0.96      1000
+
+    accuracy                           0.90     10000
+   macro avg       0.90      0.90      0.90     10000
+weighted avg       0.90      0.90      0.90     10000

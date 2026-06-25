@@ -1,0 +1,18 @@
+{
+  "cenario": "cifar10_combined",
+  "dataset": "cifar10",
+  "tecnicas": [
+    "rotation",
+    "flip",
+    "brightness",
+    "blur"
+  ],
+  "epochs": 25,
+  "batch_size": 64,
+  "concatenar": true,
+  "tamanho_treino": 100000,
+  "accuracy": 0.8203,
+  "f1_macro": 0.8185052059827266,
+  "f1_weighted": 0.8185052059827267,
+  "test_loss": 0.54299396276474
+}

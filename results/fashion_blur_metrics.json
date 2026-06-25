@@ -1,0 +1,15 @@
+{
+  "cenario": "fashion_blur",
+  "dataset": "fashion_mnist",
+  "tecnicas": [
+    "blur"
+  ],
+  "epochs": 25,
+  "batch_size": 64,
+  "concatenar": true,
+  "tamanho_treino": 120000,
+  "accuracy": 0.9073,
+  "f1_macro": 0.9083608685480666,
+  "f1_weighted": 0.9083608685480667,
+  "test_loss": 0.2885045111179352
+}

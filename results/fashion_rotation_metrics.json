@@ -1,0 +1,15 @@
+{
+  "cenario": "fashion_rotation",
+  "dataset": "fashion_mnist",
+  "tecnicas": [
+    "rotation"
+  ],
+  "epochs": 25,
+  "batch_size": 64,
+  "concatenar": true,
+  "tamanho_treino": 120000,
+  "accuracy": 0.9019,
+  "f1_macro": 0.9038882374531608,
+  "f1_weighted": 0.9038882374531609,
+  "test_loss": 0.30288681387901306
+}

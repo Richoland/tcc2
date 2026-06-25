@@ -1,4 +1,23 @@
-venv/
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# Ambientes virtuais
+venv*/
+.venv/
+
+# Modelos treinados (pesados — não sobem)
+*.keras
+*.h5
+
+# IDE / editor
+.vscode/
 .idea/
+*.swp
+
+# Sistema
+.DS_Store
+Thumbs.db
